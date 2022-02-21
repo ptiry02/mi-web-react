@@ -4,11 +4,11 @@ import MainCard from "./components/MainCard";
 
 function App() {
   return (
-    <section className="components">
+    <div className="components">
       <header className="margin"></header>
       <Menu />
       <MainCard />
-    </section>
+    </div>
   );
 }
 

@@ -1,16 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import "../assets/css/MainCard.css";
+import profilePic from "../assets/images/yo_en_moto.jpg";
 
-class MainCard extends React.Component {
+class MainCard extends Component {
   render() {
     return (
       <div class="card" id="inicio">
         <div id="photo">
-          <img
-            src="../assets/images/yo_en_moto.jpg"
-            alt="Foto perfil"
-            id="profilePic"
-          />
+          <img src={profilePic} alt="Foto perfil" id="profilePic" />
         </div>
         <div class="box">
           <h1 class="text-center pt-3">PAUL TIRY</h1>

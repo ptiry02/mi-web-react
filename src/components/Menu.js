@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import "../assets/css/Menu.css";
 
-class Menu extends React.Component {
+class Menu extends Component {
   render() {
     return (
       <div

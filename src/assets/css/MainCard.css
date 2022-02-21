@@ -40,3 +40,15 @@
   justify-content: center;
   column-gap: 0.8rem;
 }
+
+.card #photo {
+  height: 200px;
+  width: fit-content;
+  margin: 0px auto;
+  overflow: hidden;
+  border-radius: 99999px;
+  box-shadow: 0px 0px 3px black, 2px 2px 6px darkgray;
+}
+.card #photo img {
+  height: 200px;
+}
