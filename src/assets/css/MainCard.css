@@ -1,0 +1,42 @@
+.card {
+  padding: 2.5rem;
+  font-size: 1rem;
+  background-color: #a6a59c;
+  min-width: 480px;
+  box-shadow: 0px 0px 6px black, 2px 2px 12px darkgray;
+}
+.card .card_element {
+  border: 2px solid gray;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.card .card_element h3 {
+  font-size: 1rem;
+}
+.card .card_element p,
+.card .card_element ul > li {
+  font-size: 0.8rem;
+}
+.card .info {
+  background-color: #489991;
+  padding-top: 0.9rem;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 3px black, 2px 2px 6px darkgray;
+}
+.card .info p {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+.card .info p i {
+  font-size: 1rem;
+}
+.card .info p i:last-child {
+  margin-left: 15px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.8rem;
+}
