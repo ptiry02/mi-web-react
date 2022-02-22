@@ -1,24 +1,30 @@
-.btn-group-vertical .btn {
-  width: 200px;
+.btn-group-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  min-width: 200px;
+  max-width: 200px;
+  padding: 0.6rem 0.6rem;
   background-color: #489991;
   color: black;
-  border-color: black;
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 10px;
-  border-radius: 0px;
   transition: all 300ms;
 }
-.btn-group-vertical .btn:hover {
+.btn:hover {
   background-color: #f2c24e;
   font-weight: bold;
 }
 
-.btn-check:active + .btn-outline-primary,
-.btn-check:checked + .btn-outline-primary,
-.btn-outline-primary.active,
-.btn-outline-primary.dropdown-toggle.show,
-.btn-outline-primary:active {
+.btn-check {
+  position: absolute;
+  opacity: 0;
+}
+
+.btn:focus-within {
   color: black;
   background-color: #f2c24e;
   border-color: #8c7765;
