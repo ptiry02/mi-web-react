@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+//import styled from "styled-components";
 import "../assets/css/MainCard.css";
 import profilePic from "../assets/images/yo_en_moto.jpg";
 
