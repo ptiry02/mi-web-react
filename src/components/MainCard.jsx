@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import styled from "styled-components";
+import styled from "styled-components";
 import "../assets/css/MainCard.css";
 import profilePic from "../assets/images/yo_en_moto.jpg";
 
@@ -28,3 +28,14 @@ class MainCard extends Component {
 }
 
 export default MainCard;
+
+styled.card`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  font-size: 1rem;
+  background-color: #a6a59c;
+  min-width: 350px;
+  box-shadow: 0px 0px 6px black, 2px 2px 12px darkgray;
+`;
