@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MainCard from "./MainCard";
+//import MainCard from "./MainCard";
 import "../assets/css/Menu.css";
 
 class Menu extends Component {
