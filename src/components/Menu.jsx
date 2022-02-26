@@ -1,85 +1,90 @@
-import React, { Component } from "react";
-//import MainCard from "./MainCard";
-import "../assets/css/Menu.css";
+import React from "react";
+import styled from "styled-components";
+import MenuButton from "./MenuButton";
 
-class Menu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selected: true,
-    };
+const Menu = () => {
+  const [value, setValue] = React.useState("inicio");
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
-    this.handleChange = (event) => {
-      const target = event.target;
-      const value = target.id;
+  const ButtonGroup = styled.div`
+    display: flex;
+    flex-direction: column;
 
-      this.setState({
-        selected: !this.state.selected,
-      });
-      console.log(value);
-    };
-  }
+    .btn {
+      min-width: 200px;
+      max-width: 200px;
+      padding: 0.6rem 0.6rem;
+      background-color: #489991;
+      color: black;
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 10px;
+      transition: all 300ms;
+    }
+    .btn:hover {
+      background-color: #f2c24e;
+      font-weight: bold;
+    }
 
-  render() {
-    return (
-      <div
-        className="btn-group-vertical"
-        id="campos"
-        onChange={this.handleChange}
-      >
-        <label className="btn btn-outline-primary" id="btnradio1">
-          <input
-            type="radio"
-            className="btn-check"
-            name="btnradio"
-            id="btnradio1"
-            defaultChecked
-          />
-          inicio
-        </label>
+    .btn:focus-within {
+      color: black;
+      background-color: #f2c24e;
+      border-color: #8c7765;
+      box-shadow: none;
+      font-weight: bold;
+    }
+  `;
 
-        <label className="btn btn-outline-primary" id="btnradio2">
-          <input
-            type="radio"
-            className="btn-check"
-            name="btnradio"
-            id="btnradio2"
-          />
-          experiencia
-        </label>
+  return (
+    <ButtonGroup className="menu">
+      <label className="btn">
+        <MenuButton
+          value="inicio"
+          checked={value === "inicio"}
+          onChange={handleChange}
+        />
+        INICIO
+      </label>
 
-        <label className="btn btn-outline-primary" id="btnradio3">
-          <input
-            type="radio"
-            className="btn-check"
-            name="btnradio"
-            id="btnradio3"
-          />
-          formación
-        </label>
+      <label className="btn">
+        <MenuButton
+          value="exp"
+          checked={value === "exp"}
+          onChange={handleChange}
+        />
+        EXPERIENCIA
+      </label>
 
-        <label className="btn btn-outline-primary" id="btnradio4">
-          <input
-            type="radio"
-            className="btn-check"
-            name="btnradio"
-            id="btnradio4"
-          />
-          habilidades
-        </label>
+      <label className="btn">
+        <MenuButton
+          value="form"
+          checked={value === "form"}
+          onChange={handleChange}
+        />
+        FORMACIÓN
+      </label>
 
-        <label className="btn btn-outline-primary" id="btnradio5">
-          <input
-            type="radio"
-            className="btn-check"
-            name="btnradio"
-            id="btnradio5"
-          />
-          contacto
-        </label>
-      </div>
-    );
-  }
-}
+      <label className="btn">
+        <MenuButton
+          value="hab"
+          checked={value === "hab"}
+          onChange={handleChange}
+        />
+        HABILIDADES
+      </label>
+
+      <label className="btn">
+        <MenuButton
+          value="contact"
+          checked={value === "contact"}
+          onChange={handleChange}
+        />
+        CONTACTO
+      </label>
+    </ButtonGroup>
+  );
+};
 
 export default Menu;
