@@ -11,24 +11,25 @@ const Menu = () => {
   const ButtonGroup = styled.div`
     display: flex;
     flex-direction: column;
+  `;
 
-    .btn {
-      min-width: 200px;
-      max-width: 200px;
-      padding: 0.6rem 0.6rem;
-      background-color: #489991;
-      color: black;
-      text-transform: uppercase;
-      text-align: left;
-      margin-bottom: 10px;
-      transition: all 300ms;
-    }
-    .btn:hover {
+  const Label = styled.label`
+    min-width: 200px;
+    max-width: 200px;
+    padding: 0.6rem 0.6rem;
+    background-color: #489991;
+    color: black;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 10px;
+    transition: all 300ms;
+
+    :hover {
       background-color: #f2c24e;
       font-weight: bold;
     }
 
-    .btn:focus-within {
+    :focus-within {
       color: black;
       background-color: #f2c24e;
       border-color: #8c7765;
@@ -38,51 +39,51 @@ const Menu = () => {
   `;
 
   return (
-    <ButtonGroup className="menu">
-      <label className="btn">
+    <ButtonGroup>
+      <Label>
         <MenuButton
           value="inicio"
           checked={value === "inicio"}
           onChange={handleChange}
         />
         INICIO
-      </label>
+      </Label>
 
-      <label className="btn">
+      <Label>
         <MenuButton
           value="exp"
           checked={value === "exp"}
           onChange={handleChange}
         />
         EXPERIENCIA
-      </label>
+      </Label>
 
-      <label className="btn">
+      <Label>
         <MenuButton
           value="form"
           checked={value === "form"}
           onChange={handleChange}
         />
         FORMACIÓN
-      </label>
+      </Label>
 
-      <label className="btn">
+      <Label>
         <MenuButton
           value="hab"
           checked={value === "hab"}
           onChange={handleChange}
         />
         HABILIDADES
-      </label>
+      </Label>
 
-      <label className="btn">
+      <Label>
         <MenuButton
           value="contact"
           checked={value === "contact"}
           onChange={handleChange}
         />
         CONTACTO
-      </label>
+      </Label>
     </ButtonGroup>
   );
 };

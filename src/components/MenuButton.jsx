@@ -6,7 +6,7 @@ const MenuButton = () => {
     position: absolute;
     opacity: 0;
   `;
-  return <Radio className="btn-check" name="radiobtn" type="radio" />;
+  return <Radio name="radiobtn" type="radio" />;
 };
 
 export default MenuButton;
