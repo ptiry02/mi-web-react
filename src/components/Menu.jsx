@@ -1,91 +1,49 @@
 import React from "react";
 import styled from "styled-components";
-import MenuButton from "./MenuButton";
+import { MenuItems } from "./MenuItems";
 
-const Menu = () => {
-  const [value, setValue] = React.useState("inicio");
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  const ButtonGroup = styled.div`
-    display: flex;
-    flex-direction: column;
-  `;
-
-  const Label = styled.label`
-    min-width: 200px;
-    max-width: 200px;
-    padding: 0.6rem 0.6rem;
-    background-color: #489991;
-    color: black;
-    text-transform: uppercase;
-    text-align: left;
-    margin-bottom: 10px;
-    transition: all 300ms;
-
-    :hover {
-      background-color: #f2c24e;
-      font-weight: bold;
-    }
-
-    :focus-within {
-      color: black;
-      background-color: #f2c24e;
-      border-color: #8c7765;
-      box-shadow: none;
-      font-weight: bold;
-    }
-  `;
-
+export const Menu = () => {
   return (
-    <ButtonGroup>
-      <Label>
-        <MenuButton
-          value="inicio"
-          checked={value === "inicio"}
-          onChange={handleChange}
-        />
-        INICIO
-      </Label>
-
-      <Label>
-        <MenuButton
-          value="exp"
-          checked={value === "exp"}
-          onChange={handleChange}
-        />
-        EXPERIENCIA
-      </Label>
-
-      <Label>
-        <MenuButton
-          value="form"
-          checked={value === "form"}
-          onChange={handleChange}
-        />
-        FORMACIÓN
-      </Label>
-
-      <Label>
-        <MenuButton
-          value="hab"
-          checked={value === "hab"}
-          onChange={handleChange}
-        />
-        HABILIDADES
-      </Label>
-
-      <Label>
-        <MenuButton
-          value="contact"
-          checked={value === "contact"}
-          onChange={handleChange}
-        />
-        CONTACTO
-      </Label>
-    </ButtonGroup>
+    <MainMenu>
+      <List>
+        {MenuItems.map((item, index) => {
+          return (
+            <Button key={index}>
+              <Link id={item.title} className={item.cName} href={item.url}>
+                {item.title.toUpperCase()}
+              </Link>
+            </Button>
+          );
+        })}
+      </List>
+    </MainMenu>
   );
 };
 
-export default Menu;
+const MainMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const List = styled.ul`
+  list-style: none;
+  margin: 0;
+`;
+
+const Button = styled.li`
+  margin-bottom: 0.5rem;
+`;
+
+const Link = styled.a`
+  display: block;
+  background-color: #489991;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 4rem 0.5rem 0.5rem;
+  transition: all 300ms;
+  :hover {
+    background-color: #f2c24e;
+    padding-left: 1rem;
+    padding-right: 3.5rem;
+  }
+`;

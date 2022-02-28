@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Descr = () => {
-  const Name = styled.h1`
-    text-align: center;
-  `;
-  const Title = styled.h4`
-    text-align: center;
-  `;
+export const Descr = () => {
   return (
     <div>
       <Name>PAUL TIRY</Name>
@@ -16,4 +10,9 @@ const Descr = () => {
   );
 };
 
-export default Descr;
+const Name = styled.h1`
+  text-align: center;
+`;
+const Title = styled.h4`
+  text-align: center;
+`;
