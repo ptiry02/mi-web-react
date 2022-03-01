@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-export const Button = (props) => {
+export default function Button(props) {
+  const [card, setCard] = useState(props.id);
   const handleClick = (data) => {
-    let a = data;
-    console.log(a);
+    setCard(data);
+    console.log(card);
   };
   return (
     <Btn
@@ -15,10 +16,11 @@ export const Button = (props) => {
       {props.title.toUpperCase()}
     </Btn>
   );
-};
+}
 
 const Btn = styled.a`
   display: block;
+  margin-bottom: 0.5rem;
   background-color: #489991;
   text-decoration: none;
   color: black;
