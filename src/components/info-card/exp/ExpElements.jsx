@@ -7,7 +7,7 @@ const ExpElements = ({ cardId }) => {
     <>
       {ExpInfoItems.map((item) => (
         <Wrapper cardId={cardId} key={item.key}>
-          <h3>{item.job}</h3>
+          <Job>{item.job}</Job>
           <p>{item.date}</p>
           <article>{item.functions}</article>
         </Wrapper>
@@ -23,5 +23,9 @@ const Wrapper = styled.div`
   align-items: center;
   border: 2px solid gray;
   margin-bottom: 0.5rem;
-  padding: 0.6rem;
+  padding: 0.6rem 1.2rem;
+`;
+
+const Job = styled.h3`
+  margin: 0;
 `;

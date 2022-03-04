@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import MainCard from "./components/MainCard";
+import MainCard from "./components/main-card/MainCard";
 import Button from "./components/menu/Button";
 import MenuItems from "./components/menu/MenuItems";
 import InfoCard from "./components/info-card/InfoCard";

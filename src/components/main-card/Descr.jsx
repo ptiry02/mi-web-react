@@ -3,16 +3,21 @@ import styled from "styled-components";
 
 export const Descr = () => {
   return (
-    <div>
-      <Name>PAUL TIRY</Name>
-      <Title>Mecánico y programador web</Title>
-    </div>
+    <Title>
+      <h1>PAUL TIRY</h1>
+      <h4>Mecánico y programador web</h4>
+    </Title>
   );
 };
 
-const Name = styled.h1`
-  text-align: center;
-`;
-const Title = styled.h4`
-  text-align: center;
+const Title = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.8rem;
+  padding: 0.6rem 0;
+  h1,
+  h4 {
+    margin: 0;
+  }
 `;

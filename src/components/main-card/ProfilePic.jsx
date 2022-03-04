@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import profilePic from "../assets/images/yo_en_moto.jpg";
+import profilePic from "../../assets/images/yo_en_moto.jpg";
 
 export const ProfilePic = () => {
   return (

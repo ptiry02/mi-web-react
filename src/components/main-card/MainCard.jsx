@@ -18,8 +18,11 @@ export default MainCard;
 const Card = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
   align-items: center;
-  padding: 2.5rem;
+  justify-content: center;
+  row-gap: 2rem;
+  padding: 1.5rem 1.6rem;
   font-size: 1rem;
   background-color: #a6a59c;
   width: 20vw;
