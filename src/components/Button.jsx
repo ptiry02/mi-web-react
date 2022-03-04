@@ -1,27 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-export default function Button(props) {
-  const [card, setCard] = useState(props.id);
-  const handleClick = (data) => {
-    setCard(data);
-    console.log(card);
-  };
+export const Button = ({
+  ident,
+  cName,
+  label,
+  isSelected,
+  onClick = () => {},
+}) => {
   return (
-    <Btn
-      id={props.id}
-      className={props.cName}
-      onClick={() => handleClick(props.id)}
-    >
-      {props.title.toUpperCase()}
+    <Btn id={ident} className={cName} onClick={onClick} isClicked={isSelected}>
+      {label.toUpperCase()}
     </Btn>
   );
-}
+};
 
 const Btn = styled.a`
   display: block;
   margin-bottom: 0.5rem;
-  background-color: #489991;
+  background-color: ${({ isClicked }) => (isClicked ? "#f2c24e" : "#489991")};
   text-decoration: none;
   color: black;
   padding: 0.5rem 4rem 0.5rem 0.5rem;

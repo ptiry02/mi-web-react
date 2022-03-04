@@ -1,26 +1,34 @@
 import { MainCard } from "./components/MainCard";
 import styled from "styled-components";
-import Button from "./components/Button";
+import { Button } from "./components/Button";
 import { MenuItems } from "./components/MenuItems";
 import { ExpCard } from "./components/ExpCard";
+import { useState } from "react";
 
 export const App = () => {
+  const [cardId, setCardId] = useState("home");
+
+  const handleClick = (data) => {
+    setCardId(data);
+  };
+
   return (
     <Container>
       <MenuList>
-        {MenuItems.map((item, index) => (
-          <Element key={index}>
+        {MenuItems.map((item) => (
+          <Element key={item.id}>
             <Button
-              id={item.id}
-              className={item.cName}
-              title={item.title}
-              onClick
+              ident={item.id}
+              cName={item.cName}
+              label={item.title}
+              onClick={() => handleClick(item.id)}
+              isSelected={cardId === item.id}
             />
           </Element>
         ))}
       </MenuList>
       <MainCard />
-      <ExpCard />
+      {cardId !== "home" && <ExpCard cardId={cardId} />}
     </Container>
   );
 };

@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { MenuItems } from "./MenuItems";
 
-export const ExpCard = () => {
+export const ExpCard = ({ cardId }) => {
   return (
     <Card>
-      <h1>EXPERIENCIA</h1>
+      <h1>{MenuItems.find((item) => item.id === cardId).content}</h1>
     </Card>
   );
 };
