@@ -4,7 +4,7 @@ import profilePic from "../assets/images/yo_en_moto.jpg";
 
 export const ProfilePic = () => {
   return (
-    <Photo id="photo">
+    <Photo>
       <img src={profilePic} alt="Foto perfil" id="profilePic" />
     </Photo>
   );

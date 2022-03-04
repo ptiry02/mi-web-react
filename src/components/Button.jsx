@@ -1,19 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Button = ({
-  ident,
-  cName,
-  label,
-  isSelected,
-  onClick = () => {},
-}) => {
+const Button = ({ ident, cName, label, isSelected, onClick = () => {} }) => {
   return (
     <Btn id={ident} className={cName} onClick={onClick} isClicked={isSelected}>
       {label.toUpperCase()}
     </Btn>
   );
 };
+export default Button;
 
 const Btn = styled.a`
   display: block;

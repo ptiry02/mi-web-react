@@ -1,11 +1,11 @@
-import { MainCard } from "./components/MainCard";
-import styled from "styled-components";
-import { Button } from "./components/Button";
-import { MenuItems } from "./components/MenuItems";
-import { ExpCard } from "./components/ExpCard";
 import { useState } from "react";
+import styled from "styled-components";
+import MainCard from "./components/MainCard";
+import Button from "./components/Button";
+import MenuItems from "./components/MenuItems";
+import InfoCard from "./components/InfoCard";
 
-export const App = () => {
+const App = () => {
   const [cardId, setCardId] = useState("home");
 
   const handleClick = (data) => {
@@ -28,16 +28,20 @@ export const App = () => {
         ))}
       </MenuList>
       <MainCard />
-      {cardId !== "home" && <ExpCard cardId={cardId} />}
+      {cardId !== "home" && cardId !== "contact" && (
+        <InfoCard cardId={cardId} />
+      )}
     </Container>
   );
 };
 
+export default App;
+
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  height: 50%;
   column-gap: 20px;
 `;
 

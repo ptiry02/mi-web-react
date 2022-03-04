@@ -1,4 +1,4 @@
-export const MenuItems = [
+const MenuItems = [
   {
     title: "inicio",
     url: "#1",
@@ -34,3 +34,4 @@ export const MenuItems = [
     content: "contacto",
   },
 ];
+export default MenuItems;
