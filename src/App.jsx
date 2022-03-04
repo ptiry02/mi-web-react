@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styled from "styled-components";
 import MainCard from "./components/MainCard";
-import Button from "./components/Button";
-import MenuItems from "./components/MenuItems";
-import InfoCard from "./components/InfoCard";
+import Button from "./components/menu/Button";
+import MenuItems from "./components/menu/MenuItems";
+import InfoCard from "./components/info-card/InfoCard";
 
 const App = () => {
   const [cardId, setCardId] = useState("home");
@@ -19,7 +19,6 @@ const App = () => {
           <Element key={item.id}>
             <Button
               ident={item.id}
-              cName={item.cName}
               label={item.title}
               onClick={() => handleClick(item.id)}
               isSelected={cardId === item.id}

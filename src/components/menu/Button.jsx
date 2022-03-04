@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ ident, cName, label, isSelected, onClick = () => {} }) => {
+const Button = ({ ident, label, isSelected, onClick = () => {} }) => {
   return (
-    <Btn id={ident} className={cName} onClick={onClick} isClicked={isSelected}>
+    <Btn id={ident} onClick={onClick} isClicked={isSelected}>
       {label.toUpperCase()}
     </Btn>
   );

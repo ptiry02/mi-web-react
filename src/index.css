@@ -17,7 +17,7 @@ code {
   align-items: center;
   justify-content: center;
   height: 1000px;
-
+  padding-right: 200px;
   background-image: url(./assets/images/fondo-motor.jpg);
   background-repeat: no-repeat;
   background-size: cover;

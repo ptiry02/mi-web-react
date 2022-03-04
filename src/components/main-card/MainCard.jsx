@@ -22,7 +22,7 @@ const Card = styled.div`
   padding: 2.5rem;
   font-size: 1rem;
   background-color: #a6a59c;
-  min-width: 20vw;
+  width: 20vw;
   box-shadow: 0px 0px 6px black, 2px 2px 12px darkgray;
   overflow-y: scroll;
 `;
