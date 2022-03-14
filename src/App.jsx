@@ -1,54 +1,56 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Menu from "./components/menu/Menu";
 import MainCard from "./components/main-card/MainCard";
-import Button from "./components/menu/Button";
-import MenuItems from "./components/menu/MenuItems";
-import InfoCard from "./components/info-card/InfoCard";
+import ExpCard from "./components/info-card/exp/ExpCard";
+import FormCard from "./components/info-card/form/FormCard";
 
 const App = () => {
   const [cardId, setCardId] = useState("home");
 
   const handleClick = (data) => {
     setCardId(data);
+    console.log(data);
   };
 
   return (
-    <Container>
-      <MenuList>
-        {MenuItems.map((item) => (
-          <Element key={item.id}>
-            <Button
-              ident={item.id}
-              label={item.title}
-              onClick={() => handleClick(item.id)}
-              isSelected={cardId === item.id}
-            />
-          </Element>
-        ))}
-      </MenuList>
-      <MainCard />
-      {cardId !== "home" && cardId !== "contact" && (
-        <InfoCard cardId={cardId} />
-      )}
-    </Container>
+    <MainContainer>
+      <LeftContainer id="left-cont">
+        <Menu handleClick={handleClick} isSelected={cardId} />
+        <MainCard />
+      </LeftContainer>
+      <RightContainer id="right-cont">
+        <ExpCard show={cardId === "exp"} container="right-cont" />
+        <FormCard show={cardId === "form"} container="right-cont" />
+      </RightContainer>
+    </MainContainer>
   );
 };
 
 export default App;
 
-const Container = styled.div`
+const MainContainer = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   height: 50%;
   column-gap: 20px;
 `;
 
-const MenuList = styled.ul`
-  list-style: none;
-  margin: 0;
+const LeftContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 1rem;
+  height: 100%;
 `;
 
-const Element = styled.li`
-  display: block;
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
 `;
