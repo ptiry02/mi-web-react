@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import MenuItems from "./MenuItems";
-import Button from "./Button";
+import styled from 'styled-components'
+import MenuItems from './MenuItems'
+import Button from './Button'
 
 const Menu = ({ isSelected, handleClick }) => {
   return (
@@ -16,15 +16,15 @@ const Menu = ({ isSelected, handleClick }) => {
         </Element>
       ))}
     </MenuList>
-  );
-};
-export default Menu;
+  )
+}
+export default Menu
 
 const MenuList = styled.ul`
   list-style: none;
   margin: 0;
-`;
+`
 
 const Element = styled.li`
   display: block;
-`;
+`

@@ -1,17 +1,17 @@
-import { useState } from "react";
-import styled from "styled-components";
-import Menu from "./components/menu/Menu";
-import MainCard from "./components/main-card/MainCard";
-import ExpCard from "./components/info-card/exp/ExpCard";
-import FormCard from "./components/info-card/form/FormCard";
+import { useState } from 'react'
+import styled from 'styled-components'
+import Menu from './components/menu/Menu'
+import MainCard from './components/main-card/MainCard'
+import ExpCard from './components/info-card/exp/ExpCard'
+import FormCard from './components/info-card/form/FormCard'
 
 const App = () => {
-  const [cardId, setCardId] = useState("home");
+  const [cardId, setCardId] = useState('home')
 
   const handleClick = (data) => {
-    setCardId(data);
-    console.log(data);
-  };
+    setCardId(data)
+    console.log(data)
+  }
 
   return (
     <MainContainer>
@@ -20,14 +20,14 @@ const App = () => {
         <MainCard />
       </LeftContainer>
       <RightContainer id="right-cont">
-        <ExpCard show={cardId === "exp"} container="right-cont" />
-        <FormCard show={cardId === "form"} container="right-cont" />
+        <ExpCard show={cardId === 'exp'} container="right-cont" />
+        <FormCard show={cardId === 'form'} container="right-cont" />
       </RightContainer>
     </MainContainer>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 
 const MainContainer = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const MainContainer = styled.div`
   align-items: flex-start;
   height: 50%;
   column-gap: 20px;
-`;
+`
 
 const LeftContainer = styled.div`
   display: flex;
@@ -45,7 +45,7 @@ const LeftContainer = styled.div`
   align-items: flex-start;
   column-gap: 1rem;
   height: 100%;
-`;
+`
 
 const RightContainer = styled.div`
   display: flex;
@@ -53,4 +53,4 @@ const RightContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   height: 100%;
-`;
+`

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Slide from "@mui/material/Slide";
+import styled from 'styled-components'
+import Slide from '@mui/material/Slide'
 
 const FormCard = ({ show, container }) => {
   return (
@@ -9,7 +9,7 @@ const FormCard = ({ show, container }) => {
       timeout={700}
       unmountOnExit={true}
       container={() => {
-        return document.getElementById(container);
+        return document.getElementById(container)
       }}
     >
       <Card>
@@ -23,9 +23,9 @@ const FormCard = ({ show, container }) => {
         ))}*/}
       </Card>
     </Slide>
-  );
-};
-export default FormCard;
+  )
+}
+export default FormCard
 
 const Card = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ const Card = styled.div`
   width: 25vw;
   height: 100%;
   overflow-y: scroll;
-`;
+`
 /*
 const Wrapper = styled.div`
   display: flex;

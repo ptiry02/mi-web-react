@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const InfoBox = () => {
   return (
@@ -22,8 +22,8 @@ export const InfoBox = () => {
         </Icon>
       </Social>
     </Info>
-  );
-};
+  )
+}
 
 const Info = styled.div`
   display: flex;
@@ -34,15 +34,15 @@ const Info = styled.div`
   border-radius: 10px;
   box-shadow: 0px 0px 3px black, 2px 2px 6px darkgray;
   padding: 1.2rem 2.3rem;
-`;
+`
 const Personal = styled.div`
   display: flex;
   flex-direction: column;
-`;
+`
 const Social = styled.div`
   display: flex;
   flex-direction: column;
-`;
+`
 const Icon = styled.a`
   color: black;
   margin-bottom: 0.7rem;
@@ -51,4 +51,4 @@ const Icon = styled.a`
   :hover {
     color: #a6a59c;
   }
-`;
+`

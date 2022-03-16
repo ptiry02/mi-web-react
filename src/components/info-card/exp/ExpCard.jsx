@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import ExpInfoItems, { cardTitle } from "./ExpInfoItems";
-import Slide from "@mui/material/Slide";
+import styled from 'styled-components'
+import ExpInfoItems, { cardTitle } from './ExpInfoItems'
+import Slide from '@mui/material/Slide'
 
 const ExpCard = ({ show, container }) => {
   return (
@@ -22,9 +22,9 @@ const ExpCard = ({ show, container }) => {
         ))}
       </Card>
     </Slide>
-  );
-};
-export default ExpCard;
+  )
+}
+export default ExpCard
 
 const Card = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const Card = styled.div`
   width: 25vw;
   height: 100%;
   overflow: scroll;
-`;
+`
 
 const Wrapper = styled.div`
   display: flex;
@@ -45,8 +45,8 @@ const Wrapper = styled.div`
   border: 2px solid gray;
   margin-bottom: 0.5rem;
   padding: 0.6rem 1.2rem;
-`;
+`
 
 const Job = styled.h3`
   margin: 0;
-`;
+`

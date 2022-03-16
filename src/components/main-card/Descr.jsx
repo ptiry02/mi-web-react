@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Descr = () => {
   return (
@@ -6,8 +6,8 @@ export const Descr = () => {
       <h1>PAUL TIRY</h1>
       <h4>Mecánico y programador web</h4>
     </Title>
-  );
-};
+  )
+}
 
 const Title = styled.div`
   display: flex;
@@ -19,4 +19,4 @@ const Title = styled.div`
   h4 {
     margin: 0;
   }
-`;
+`

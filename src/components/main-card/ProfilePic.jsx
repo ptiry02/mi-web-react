@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import profilePic from "../../assets/images/yo_en_moto.jpg";
+import styled from 'styled-components'
+import profilePic from '../../assets/images/yo_en_moto.jpg'
 
 export const ProfilePic = () => {
   return (
     <Photo>
       <img src={profilePic} alt="Foto perfil" id="profilePic" />
     </Photo>
-  );
-};
+  )
+}
 
 const Photo = styled.div`
   height: 200px;
@@ -19,4 +19,4 @@ const Photo = styled.div`
   img {
     height: 200px;
   }
-`;
+`

@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { ProfilePic } from "./ProfilePic";
-import { Descr } from "./Descr";
-import { InfoBox } from "./InfoBox";
+import styled from 'styled-components'
+import { ProfilePic } from './ProfilePic'
+import { Descr } from './Descr'
+import { InfoBox } from './InfoBox'
 
 const MainCard = () => {
   return (
@@ -10,9 +10,9 @@ const MainCard = () => {
       <Descr />
       <InfoBox />
     </Card>
-  );
-};
-export default MainCard;
+  )
+}
+export default MainCard
 
 const Card = styled.div`
   display: flex;
@@ -27,4 +27,4 @@ const Card = styled.div`
   width: 20vw;
   box-shadow: 0px 0px 6px black, 2px 2px 12px darkgray;
   overflow-y: scroll;
-`;
+`
