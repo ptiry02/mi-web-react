@@ -26,7 +26,7 @@ const App = () => {
   return (
     <MainContainer>
       <Menu handleClick={handleClick} isSelected={card.id} />
-      <MainCard />
+      <MainCard className="main" />
       <Card id={card.id} show={card.show} timeout={transitionTime} />
     </MainContainer>
   )
