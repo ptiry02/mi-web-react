@@ -2,27 +2,32 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Menu from './components/menu/Menu'
 import MainCard from './components/main-card/MainCard'
-import ExpCard from './components/info-card/exp/ExpCard'
-import FormCard from './components/info-card/form/FormCard'
+import Card from './components/info-cards/exp/Card'
 
 const App = () => {
-  const [cardId, setCardId] = useState('home')
+  const [card, setCard] = useState({ id: 'home', show: false })
+  const transitionTime = 700
 
   const handleClick = (data) => {
-    setCardId(data)
-    console.log(data)
+    if (data === 'home') {
+      return setCard({ id: 'home', show: false })
+    }
+    if (data !== 'home' && card.id === 'home') {
+      return setCard({ id: data, show: true })
+    }
+    return (
+      setCard({ ...card, show: false }),
+      setTimeout(() => {
+        setCard({ id: data, show: true })
+      }, transitionTime)
+    )
   }
 
   return (
     <MainContainer>
-      <LeftContainer id="left-cont">
-        <Menu handleClick={handleClick} isSelected={cardId} />
-        <MainCard />
-      </LeftContainer>
-      <RightContainer id="right-cont">
-        <ExpCard show={cardId === 'exp'} container="right-cont" />
-        <FormCard show={cardId === 'form'} container="right-cont" />
-      </RightContainer>
+      <Menu handleClick={handleClick} isSelected={card.id} />
+      <MainCard />
+      <Card id={card.id} show={card.show} timeout={transitionTime} />
     </MainContainer>
   )
 }
@@ -36,21 +41,4 @@ const MainContainer = styled.div`
   align-items: flex-start;
   height: 50%;
   column-gap: 20px;
-`
-
-const LeftContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  column-gap: 1rem;
-  height: 100%;
-`
-
-const RightContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
 `
