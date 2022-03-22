@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import Slide from '@mui/material/Slide'
-import items from '../../infoCardItems.json'
+import items from './infoCardItems.json'
 
 const InfoCard = ({ id, show, timeout }) => {
   return (

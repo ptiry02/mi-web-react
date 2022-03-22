@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Menu from './components/menu/Menu'
 import MainCard from './components/main-card/MainCard'
-import Card from './components/info-cards/exp/Card'
+import Card from './components/info/Card'
 
 const App = () => {
   const [card, setCard] = useState({ id: 'home', show: false })
