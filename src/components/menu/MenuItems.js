@@ -16,7 +16,7 @@ const MenuItems = [
   },
   {
     title: 'habilidades',
-    id: 'hab',
+    id: 'skills',
     selected: false,
   },
   {

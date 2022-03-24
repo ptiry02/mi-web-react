@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Menu from './components/menu/Menu'
 import MainCard from './components/main-card/MainCard'
-import Card from './components/info/Card'
+import InfoCard from './components/info-card/InfoCard'
 
 const App = () => {
   const [card, setCard] = useState({ id: 'home', show: false })
@@ -10,7 +10,12 @@ const App = () => {
 
   const handleClick = (data) => {
     if (data === 'home') {
-      return setCard({ id: 'home', show: false })
+      return (
+        setCard({ ...card, show: false }),
+        setTimeout(() => {
+          setCard({ id: data, show: false })
+        }, transitionTime)
+      )
     }
     if (data !== 'home' && card.id === 'home') {
       return setCard({ id: data, show: true })
@@ -27,7 +32,7 @@ const App = () => {
     <MainContainer>
       <Menu handleClick={handleClick} isSelected={card.id} />
       <MainCard className="main" />
-      <Card id={card.id} show={card.show} timeout={transitionTime} />
+      <InfoCard id={card.id} show={card.show} timeout={transitionTime} />
     </MainContainer>
   )
 }
