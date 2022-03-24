@@ -27,4 +27,5 @@ const Card = styled.div`
   width: 20vw;
   box-shadow: 0px 0px 6px black, 2px 2px 12px darkgray;
   overflow-y: scroll;
+  border-radius: 1rem;
 `
