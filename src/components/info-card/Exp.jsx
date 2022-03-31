@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import jobs from '../../assets/helpers/experience.json'
 
 const Exp = () => {
