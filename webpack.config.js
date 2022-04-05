@@ -1,10 +1,10 @@
-const path = require("path");
+const path = require('path')
 
 module.exports = {
   //...
   resolve: {
     alias: {
-      "@mui/styled-engine": "@mui/styled-engine-sc",
+      '@mui/styled-engine': '@mui/styled-engine-sc',
     },
   },
-};
+}
